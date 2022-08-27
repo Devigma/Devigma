@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Mouse+Memoirs&family=Poppins&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'lato', sans-serif;
+    line-height: 1.5;
+}
+hr {
+    width: 30%;
+    margin-bottom: .9rem;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 199;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vh;
+    background-color: navy;
+    overflow: hidden;
+}
+header input {
+    display: none;
+}
+#logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#nav {
+    z-index: 199;
+}
+li:not(last-child) {
+    margin-right: 1rem;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: .7rem;
+    outline: none;
+}
+li a:hover,
+.active {
+    color: goldenrod;
+}
+header label {
+    display: inline-block;
+    padding: 0.2rem;
+    border-radius: 10px;
+    background-color: transparent;
+}
+header label .fa {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #777;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 320px) {
+    #nav {
+        position: fixed;
+        top: 10vh;
+        right: -50vw;
+        width: 50vw;
+        height: 90vh;
+        margin: 0;
+        padding-top: 10vh;
+        background-color: navy;
+        opacity: 0;
+        transition: all .8s ease-in-out;
+    }
+    #demos2 {
+        display: none;
+        transition: all 2s linear;
+    }
+    #demos1 {
+        display: block;
+        transition: all 2s linear;
+    }
+    #demos:checked ~ #nav {
+        opacity: 1;
+        margin-right: 50vw;
+    }
+    #demos:checked ~ .iclass #demos1 {
+        opacity: 0;
+        display: none;
+    }
+    #demos:checked ~ .iclass #demos2 {
+        opacity: 1;
+        display: block;
+    }
+    #demo:checked ~ .iclass #demos1 {
+        opacity: 1;
+        display: block;
+    }
+    #demo:checked ~ .iclass #demos2 {
+        opacity: 0;
+        display: none;
+    }
+
+    #demo:checked ~ #nav {
+        opacity: 0; 
+        margin-right: 0;
+    }
+    li {
+        margin-bottom: 2rem;
+        display: block;
+        padding: 0.6rem 1rem;
+}
+    }
+@media screen and (min-width: 769px) {
+    #logo {
+        width: 150px;
+        height: 150px;
+    }
+    #nav {
+        position: relative;
+        padding-top: 0;
+        top: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        opacity: 1;
+        transition: none;
+    }
+    li {
+        display: inline-block;
+        padding: 0.2rem  0.7rem;
+        margin-bottom: 0;
+    }
+    .iclass {
+        display: none;
+    }
+}
+.hero-banner {
+    max-width: 100vw;
+    height: 70vh;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    background-color: navy;
+    overflow: hidden;
+}
+.heroes {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.section,
+.section-2,
+.section-3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 2rem;
+}
+.section-item, .section-i {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    height: 85%;
+    overflow: hidden;
+}
+
+@media  screen and (min-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+    .section, 
+    .section-2,
+    .section-3 {
+        height: 75vh;
+    }
+    .section-i, .section-item {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .section-2 .section-item {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .section-3 .section-i {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .item-1, .item-2 {
+        width: 100%;
+        height: 100%;
+    }
+    .itembox {
+        width: 50%;
+    }
+    .section-box {
+        width: 25rem;
+        height: 28rem;
+    }
+    .container-content {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .footer {
+        flex-direction: column;
+        height: 135vh;
+    }
+    .message {
+        width: 100%;
+    }
+    .message p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 481px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media  screen and (min-width: 769px) {
+    html {
+        font-size: 16px;
+    }
+    .section, 
+    .section-2,
+    .section-3 {
+        height: 65vh;
+    }
+    .section-item, 
+    .section-i {
+        flex-direction: row;
+    }
+    .item-1, .item-2 {
+        width: 40%;
+    }
+    .itembox {
+        width: 20%;
+    }
+    .section-3 .section-i {
+        width: 65%;
+        height: 45rem;
+    }
+    .section-box {
+        width: 16rem;
+        height: 19rem;
+    }
+    .container-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .content {
+        width: 40%;
+    }
+    .footer {
+        flex-direction: row;
+        height: 75vh;
+    }
+    .message {
+        width: 28%;
+    }
+    .message p {
+        font-size: .7rem;
+    }
+}
+button {
+    border: 1px solid navy;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-variant: small-caps;
+    cursor: pointer;
+    font-weight: bold;
+}
+.item-1 h1 {
+    margin-bottom: .4rem;
+    font-size: 3rem;
+    
+}
+p {
+    text-align: justify;
+}
+.item-1 .last {
+    margin-bottom: 2rem;
+}
+.item-2 {
+    height: 80%;
+    background-image: url(../gallery/main.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.itembox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa, .itembox h2 {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+.itembox h2 {
+    font-weight: 400;
+
+}
+.itembox p {
+    font-weight: 800;
+}
+.section-2 {
+    flex-direction: column;
+    color: black;
+    background-color: black;
+    padding: 1rem;
+}
+.section-2 h1, 
+.section-3 h1{
+    font-size: 3rem;
+    font-weight: 800;
+    color: black;
+}
+.section-2 h1 {
+    color: whitesmoke;
+}
+.section-2 p {
+    color: whitesmoke;
+}
+.section-2 .fa {
+    color: goldenrod;
+}
+.section-3 hr {
+    width: 70%;
+}
+.section-3 {
+    flex-direction: column;
+    color: black;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    height: auto;
+    gap: 2rem;
+}
+.section-i {
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.section-box {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+.box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(41, 38, 38, 0.2);
+    transition-duration: .8s;
+    opacity: 0;
+}
+.section-box:hover .box-content {
+    opacity: 1;
+}
+.box-content h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: whitesmoke;
+}
+.box2 {
+    width: 100%;
+    height: 100%;
+}
+.box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-1 {
+    background-color: navy;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.container-1 h1 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container-content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content {
+    width: 22rem;
+    height: 25rem;
+    padding: .5rem;
+    border-radius: 1rem 1.5rem;
+    box-shadow: 2px 3px 5px white;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.content i {
+    display: block;
+    padding-top: .8rem;
+    height: 65px;
+}
+.content .fa {
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+}
+.fa-ravelry{
+    transform: rotate(90deg);
+}
+.content-text {
+    padding: 1rem;
+    width: 100%;
+}
+.content-text h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: navy;
+}
+.content-text p {
+    font-weight: 600;
+    font-size: .8rem;
+}
+.footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 3rem 0 5rem;
+    justify-content: center;
+    border-top: 1px solid #777;
+    background-color: whitesmoke;
+
+}
+.links-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.list-1,
+.list-2,
+.list-3 {
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+.list-2 li:first-child,
+.list-1 li:first-child,
+.list-3 li:first-child {
+    font-size: 1rem;
+    user-select: none;
+    background-color: white;
+    padding-bottom: .8rem;
+    font-weight: bold;
+    padding: .3rem;
+}
+.footer li {
+   display: block;
+   color: black;
+   border: none;
+   padding: 1rem;
+}
+.footer a {
+    color: black;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+    outline: none;
+}
+.footer a:hover {
+    color: goldenrod;
+}
+
+.last-bar {
+    border-top: 1px solid black;
+    color: #777;
+    background-color: navy;
+    font-weight: 600;
+    padding: 1rem 2rem;
+}
+@media screen and (min-width: 767px) {
+    .links-box {
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+}

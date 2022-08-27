@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Mouse+Memoirs&family=Poppins&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'mouse memoirs', sans-serif;
+    line-height: 1.5;
+   
+}
+@media  screen and (min-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media  screen and (min-width: 481px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media  screen and (min-width: 769px) {
+    html {
+        font-size: 16px;
+    }
+}
+.container {
+    max-width: 100vw;
+    background-color: whitesmoke;
+    padding: 3rem;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.container-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-p h1 {
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    font-weight: bold;
+    color: navy;
+    text-transform: capitalize;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+.searchbox {
+    
+}
+.searchbox form {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    align-items: center;
+    background-color: navy;
+    border-radius: 5px;
+    height: 2.7rem;
+}
+.searchbox button {
+    display: inline-block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.searchbox label,
+.searchbox button {
+    width: 3rem;
+}
+.searchbox i {
+    text-align: center;
+    display: block;
+    line-height: 2.7rem;
+}
+.searchbox .fa {
+    color: #777;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.searchbox input {
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-self: stretch;
+    display: block;
+    width: 90%;
+    padding-left: 1.5rem;
+    border: none;
+    outline: none;
+    
+}
+.product-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+}
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+.product-cart {
+    background-color: navy;
+    width: 15rem;
+    height: 18rem;
+    border-radius: 30px 15px;
+    overflow: hidden;
+}
+#product-image {
+    width: 100%;
+    height: 80%;
+}
+#product-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.p-text {
+    height: 20%;
+    text-align: center;
+    color: white;
+    padding-top: .7rem;
+}
+.hide {
+    display: none;
+}

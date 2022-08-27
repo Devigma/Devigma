@@ -1,0 +1,117 @@
+.title {
+    margin-top: 10vh;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    text-transform: capitalize;
+}
+#span1 {
+    display: inline-block;
+    padding: .8rem;
+    font-size: 2rem;
+    background-color: blue;
+    color: white;
+    margin-right: 2rem;
+}
+#span2 {
+    display: inline-flex;
+    flex-direction: column;
+}
+#span2 hr {
+    width: 80%;
+    height: .1rem;
+}
+.description {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    font-size: 1rem;
+}
+.description p {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+.description span {
+    text-transform: uppercase;
+}
+.storyboard {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+.story-text {
+    width: 100%;
+}
+.story-text p{
+     padding: 1rem 0rem;
+     font-weight: 600;
+     text-align: justify;
+}
+.story-img {
+    width: 290px;
+    background-color: orangered;
+    height: 340px;
+    margin-bottom: 3rem;
+}
+.story-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (min-width: 600px) {
+    .storyboard {
+        padding-top: 3rem;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .story-text,
+    .story-img {
+        width: 50%;
+
+    }
+    .story-img {
+        order: 2;
+        align-self: flex-start;
+        margin-top: 10%;
+        width: 270px;
+        height: 380px;
+    }
+}
+@media screen and (min-width: 1130px) {
+    .storyboard {
+        width: 70%;
+    }
+    .story-img {
+        margin-top: 0;
+        margin-right: 8vh;
+    }
+}
+.mission-c img {
+    display: block;
+    margin: 0 auto;
+    width: 22rem;
+    height: 22rem;
+    object-fit: contain;
+}
+@media screen and (min-width: 600px) {
+    .mission-c img {
+        width: 35rem;
+        height: 35rem;
+    }
+}
+@media screen and (min-width: 1080px) {
+    .mission-c img {
+        width: 50rem;
+        height: 50rem;
+    }
+}
+

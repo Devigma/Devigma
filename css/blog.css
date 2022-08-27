@@ -1,0 +1,219 @@
+.blog-banner {
+    width: 100%;
+    height: 60vh;
+    background-color: green;
+    margin-top: 10vh;
+}
+.blogimage {
+    width: 100%;
+    height: 60vh;
+}
+.blogimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog-container {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+.blog1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blog-content {
+    border-radius: 20px;
+    box-shadow: 0 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-end;
+    width: 80%;
+    height: 30rem;
+    margin: 0 1.5rem 9rem;
+    background-color: whitesmoke;
+    transition-duration: 1s;
+}
+.blog-content:hover {
+    transform: translateY(-18px);
+}
+.blog-content:nth-child(odd) {
+    height: 24rem;
+}
+.content-img {
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    top: -40px;
+    left: 15%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px black;
+}
+.content-img img {
+    width: 100%;
+    height: auto;
+    
+}
+.content-text {
+    transform: translateY(-28px);
+}
+.content-text h4 {
+    text-transform: capitalize;
+    word-spacing: 2;
+}
+.content-text p {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.content-text button {
+    float: right;
+    margin-top: 1rem;
+}
+.content-text button a {
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 481px){
+    .blog-content {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 700px){
+    .blog-content {
+        width: 40%;
+    }
+    .blog-container {
+        width: 90%;
+        margin: 80px auto 40px;
+    }
+}
+
+.blog2 {
+    width: 100%;
+}   
+.trends {
+    padding-top: 2rem;
+    background-color: navy;
+    border-radius: 5px 15px;
+    overflow: hidden;
+}
+.trends h4{
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        color: white;
+        margin-top: 1rem;
+        padding-bottom: 0;
+}
+.blocks {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 2px solid grey;
+}
+.blocks img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.blocks-p {
+    width: 100%;
+    text-transform: lowercase;
+    font-weight: 600;
+    font-size: .7rem;
+    margin-left: 2rem;
+    padding: 3rem;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+@media screen and (min-width: 700px){ 
+    .trends {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .blocks img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1038px){
+
+    .blog2 {
+        width: 30%;
+        margin-top: -40px;
+        align-self: stretch;
+    }
+    .blog-container {
+        flex-direction: row; 
+    }
+    .blog-content {
+        height: 24rem;
+    }
+    .trends {
+        width: 100%;
+    }
+    .blocks {
+        flex-direction: column;
+        gap: .8rem;
+    }
+    .blocks-p {
+        padding: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1200px){
+    .blog1 {
+        width: 100%;
+    }
+    .blog-content {
+        width: 27%;
+        margin: 0 1.2rem 6rem;
+    }
+    .blog-content:nth-child(odd) {
+        height: 28rem;
+    }
+}
+h4 {
+    color: black;
+    width: 100%;
+    text-transform: lowercase;
+    font-size: large;
+    padding-bottom: .7rem;
+} 
+#okay {
+    width: 40%;
+    margin-left: 30%;
+}
+.socio-club {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.socio-club .fa-brands:not(last-child) {
+      margin-left: 1rem;
+}
+.socio-club .fa-brands {
+    font-size: 2rem;
+    background-color: black;
+    color: goldenrod;
+    opacity: .8;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
+}
+.socio-club .fa-brands:hover {
+    opacity: 1;
+}
