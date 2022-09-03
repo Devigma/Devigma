@@ -8,9 +8,37 @@
     font-family: 'lato', sans-serif;
     line-height: 1.5;
 }
+#static {
+    box-shadow: 0 5px 5px grey;
+    background-color: navy;
+    border-radius: 30%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 15vh;
+    right: 3rem;
+}
+#static:hover {
+    background-color: white;
+    border: 1px solid navy;
+}
+#static:hover a {
+    color: red;
+}
+#static a {
+    display: block;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-decoration: none;
+    outline: none;
+    padding: .8rem 1rem;
+}
 hr {
     width: 30%;
     margin-bottom: .9rem;
+}
+body {
+    background-color: whitesmoke;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -27,7 +55,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 6vh;
-    background-color: navy;
+    background-color: whitesmoke;
     overflow: hidden;
 }
 header input {
@@ -46,25 +74,31 @@ header input {
 #nav {
     z-index: 199;
 }
+li {
+    border-radius: 5px;
+    border: none;
+}
 li:not(last-child) {
     margin-right: 1rem;
 }
+li:hover {
+    background-color: white;
+}
 
 li a {
+    padding: .7rem 1.2rem;
     display: block;
     color: white;
     text-decoration: none;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     font-size: .7rem;
     outline: none;
+    transition-duration: .5s;
 }
-li a:hover,
-.active {
-    color: goldenrod;
-}
+
 header label {
     display: inline-block;
     padding: 0.2rem;
@@ -84,10 +118,10 @@ header label .fa {
         top: 10vh;
         right: -50vw;
         width: 50vw;
-        height: 90vh;
+        height: 100vh;
         margin: 0;
-        padding-top: 10vh;
-        background-color: navy;
+        padding-top: 20vh;
+        background-color: black;
         opacity: 0;
         transition: all .8s ease-in-out;
     }
@@ -125,10 +159,19 @@ header label .fa {
         margin-right: 0;
     }
     li {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         display: block;
         padding: 0.6rem 1rem;
 }
+    li:hover a,
+    .active {
+        color: navy;
+        background-color: white;
+    }
+    .active a {
+        color: navy;
+    }
+    
     }
 @media screen and (min-width: 769px) {
     #logo {
@@ -151,9 +194,26 @@ header label .fa {
         padding: 0.2rem  0.7rem;
         margin-bottom: 0;
     }
+    li a {
+        color: navy;
+    }
+    .active a {
+        color: whitesmoke;
+    }
     .iclass {
         display: none;
     }
+    li:hover {
+        background-color: navy;
+    }
+    li:hover a,
+    .active {
+    color: whitesmoke;
+    background-color: navy;
+}
+    .active a {
+    color: white;
+}
 }
 .hero-banner {
     max-width: 100vw;
@@ -177,8 +237,8 @@ header label .fa {
 }
 .hero-banner img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: auto;
+    object-fit: contain;
 }
 .section,
 .section-2,
@@ -505,15 +565,27 @@ p {
     text-align: center;
     list-style: none;
 }
+.list-1 li:hover a,
+.list-2 li:hover a,
+.list-3 li:hover a {
+    color: navy;
+    background-color: transparent;
+}
+.list-1 li:hover,
+.list-2 li:hover,
+.list-3 li:hover {
+    background-color: white;
+}
+
 .list-2 li:first-child,
 .list-1 li:first-child,
 .list-3 li:first-child {
-    font-size: 1rem;
+    font-size: .8rem;
     user-select: none;
-    background-color: white;
-    padding-bottom: .8rem;
+    background-color: navy;
+    padding: .6rem 1rem;
     font-weight: bold;
-    padding: .3rem;
+    color: white;
 }
 .footer li {
    display: block;
@@ -529,9 +601,6 @@ p {
     display: inline-block;
     outline: none;
 }
-.footer a:hover {
-    color: goldenrod;
-}
 
 .last-bar {
     border-top: 1px solid black;
@@ -543,6 +612,7 @@ p {
 @media screen and (min-width: 767px) {
     .links-box {
         justify-content: flex-start;
-        padding-left: 2rem;
+        padding-left: 5rem;
     }
+
 }

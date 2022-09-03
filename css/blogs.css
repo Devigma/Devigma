@@ -1,6 +1,7 @@
 #pagin {
     background-color: whitesmoke;
-    padding: .5rem 2rem;
+    padding: .5rem 11%;
+    margin-top: 13vh;
     margin-bottom: .5rem;
 }
 #pagin a {
@@ -28,7 +29,6 @@
 section {
     width: 80%;
     margin: 0 auto;
-    margin-top: 13vh;
 }
 h1 {
     text-transform: capitalize;

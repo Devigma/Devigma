@@ -43,7 +43,7 @@
     transition-duration: 1s;
 }
 .blog-content:hover {
-    transform: translateY(-18px);
+    transform: translateY(-3px);
 }
 .blog-content:nth-child(odd) {
     height: 24rem;

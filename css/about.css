@@ -98,20 +98,8 @@
 .mission-c img {
     display: block;
     margin: 0 auto;
-    width: 22rem;
-    height: 22rem;
+    width: 80%;
+    height: auto;
     object-fit: contain;
-}
-@media screen and (min-width: 600px) {
-    .mission-c img {
-        width: 35rem;
-        height: 35rem;
-    }
-}
-@media screen and (min-width: 1080px) {
-    .mission-c img {
-        width: 50rem;
-        height: 50rem;
-    }
 }
 
